@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Bunga Mekar</title>
+    <style>
+        /* Gaya dasar untuk halaman */
+        body {
+            background-color: #282c34;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Container untuk bunga */
+        .flower {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        /* Kelopak bunga */
+        .petal {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+            transform-origin: 50% 100%;
+            animation: grow 3s ease-in-out infinite;
+        }
+        /* Center atau inti bunga */
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: #ffd93d;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px #ffd93d;
+        }
+        /* Animasi untuk membuat bunga mekar */
+        @keyframes grow {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(20deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flower">
+        <!-- Kelopak-kelopak bunga diletakkan mengelilingi center bunga -->
+        <div class="petal" style="transform: rotate(0deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(45deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(90deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(135deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(180deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(225deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(270deg) translate(0, -50%);"></div>
+        <div class="petal" style="transform: rotate(315deg) translate(0, -50%);"></div>
+        <div class="center"></div>
+    </div>
+</body>
+</html>
